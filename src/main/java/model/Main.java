@@ -1,11 +1,13 @@
 package model;
 
-import java.io.IOException;
+import java.math.BigDecimal;
 
 public class Main {
-    public static void main(String[] args) throws IOException {
-        Calc calc = new Calc();
-        System.out.println(calc.calculate(new Addition(2,4)));
-        System.out.println(calc.calculate(new Division(10,2)));
-    }
+  public static void main(String[] args) {
+    BankingAppWithDrawableService bankingAppWithDrawableService = new BankingAppWithDrawableService();
+    bankingAppWithDrawableService.withDraw(BigDecimal.valueOf(10));
+
+    Account account = new CurrentAcccount();
+    account.deposit();
+  }
 }
