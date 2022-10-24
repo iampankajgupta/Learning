@@ -1,4 +1,5 @@
 package CarRentalApp.Product;
 
-public class ReservationType {
+public enum ReservationType {
+    DAILY
 }

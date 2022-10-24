@@ -13,8 +13,47 @@ public class Reservation {
   Location dropLocation;
   ReservationType reservationType;
   ReservationStatus reservationStatus;
+  Location location;
 
+  public Location getPickUpLocation() {
+    return pickUpLocation;
+  }
 
+  public void setPickUpLocation(Location pickUpLocation) {
+    this.pickUpLocation = pickUpLocation;
+  }
+
+  public Location getDropLocation() {
+    return dropLocation;
+  }
+
+  public void setDropLocation(Location dropLocation) {
+    this.dropLocation = dropLocation;
+  }
+
+  public ReservationType getReservationType() {
+    return reservationType;
+  }
+
+  public void setReservationType(ReservationType reservationType) {
+    this.reservationType = reservationType;
+  }
+
+  public ReservationStatus getReservationStatus() {
+    return reservationStatus;
+  }
+
+  public void setReservationStatus(ReservationStatus reservationStatus) {
+    this.reservationStatus = reservationStatus;
+  }
+
+  public Location getLocation() {
+    return location;
+  }
+
+  public void setLocation(Location location) {
+    this.location = location;
+  }
 
   public int getReservationId() {
     return reservationId;
@@ -62,5 +101,14 @@ public class Reservation {
 
   public void setBookedTill(Date bookedTill) {
     this.bookedTill = bookedTill;
+  }
+
+  public int createReservation(Vehicle vehicle, User user) {
+    reservationId = 12324;
+    this.user = user;
+    this.vehicle = vehicle;
+    reservationType = ReservationType.DAILY;
+    reservationStatus = ReservationStatus.SCHEDULED;
+    return reservationId;
   }
 }
