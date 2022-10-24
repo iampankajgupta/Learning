@@ -1,5 +1,5 @@
 package CarRentalApp.Product;
 
 public enum VehicleType {
-  CAR;
+  CAR,BIKE;
 }

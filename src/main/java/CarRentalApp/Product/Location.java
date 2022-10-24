@@ -6,6 +6,13 @@ public class Location {
   String pinCode;
   String state;
 
+  public Location(String address, String city, String pinCode, String state) {
+    this.address = address;
+    this.city = city;
+    this.pinCode = pinCode;
+    this.state = state;
+  }
+
   public String getState() {
     return state;
   }

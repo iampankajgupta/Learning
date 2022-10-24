@@ -17,32 +17,34 @@ public class Test {
     PriorityQueue<Integer>maxHeap = new PriorityQueue<>(Comparator.reverseOrder());
     int maxRemove = N/3;
     int firstHalf = N/2;
+    int firstHalfSum = 0;
+    int secondHalfSum = 0;
     int i = 0;
     // store the first half element
     for(i = 0;i<firstHalf;i++){
       minHeap.add(A.get(i));
+      firstHalfSum+=A.get(i);
     }
     // store the second Half element
     for(i = firstHalf;i<N;i++){
       maxHeap.add(A.get(i));
+      secondHalfSum+=A.get(i);
     }
-
-    while(maxRemove>=0){
-      maxHeap.poll();
-      maxRemove--;
-      if(maxRemove>=0){
-        minHeap.poll();
-        maxRemove--;
+    boolean flag = true;
+    while(maxRemove>0){
+      if(flag){
+        secondHalfSum-=maxHeap.poll();
       }
+      else {
+        firstHalfSum-=minHeap.poll();
+      }
+      flag = !flag;
+      maxRemove--;
+
     }
-    int minHeapSum = 0;
-    while(minHeap.size()>0){
-      minHeapSum+=minHeap.poll();
-    }
-    int maxHeapSum = 0;
-    while(maxHeap.size()>0){
-      maxHeapSum+=maxHeap.poll();
-    }
-    return minHeapSum-maxHeapSum;
+    return firstHalfSum-secondHalfSum;
   }
 }
+
+
+// 3 4 5 1

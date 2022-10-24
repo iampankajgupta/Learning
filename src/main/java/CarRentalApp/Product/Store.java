@@ -1,16 +1,32 @@
 package CarRentalApp.Product;
 
+import java.util.ArrayList;
 import java.util.List;
 
 public class Store {
   int storeId;
   Location location;
-  List<Vehicle> vehicles;
   VehicleInventory vehicleInventory;
-  List<Reservation> reservations;
+  List<Reservation> reservations = new ArrayList<>();
+
+
+  public Reservation createReservation(Vehicle vehicle, User user){
+    Reservation reservation = new Reservation();
+    reservation.createReservation(vehicle,user);
+    reservations.add(reservation);
+    return reservation;
+  }
 
   public int getStoreId() {
     return storeId;
+  }
+
+  public VehicleInventory getVehicleInventory() {
+    return vehicleInventory;
+  }
+
+  public void setVehicleInventory(VehicleInventory vehicleInventory) {
+    this.vehicleInventory = vehicleInventory;
   }
 
   public void setStoreId(int storeId) {
@@ -25,20 +41,14 @@ public class Store {
     this.location = location;
   }
 
-  public List<Vehicle> getVehicles() {
-    return vehicles;
+  // Vehicle Inventory Manages all the storing and getting vehicles
+  public List<Vehicle> getVehicles(VehicleType bike) {
+    return InventoryFactory.getVehicleFactory(bike).getVehicles();
   }
 
-  public void setVehicles(List<Vehicle> vehicles) {
-    this.vehicles = vehicles;
-  }
-
-  public VehicleInventory getVehicleInventory() {
-    return vehicleInventory;
-  }
-
-  public void setVehicleInventory(VehicleInventory vehicleInventory) {
-    this.vehicleInventory = vehicleInventory;
+  public void setVehicles(List<Vehicle> vehicles,VehicleType vehicleType) {
+     this.vehicleInventory = InventoryFactory.getVehicleFactory(vehicleType);
+     vehicleInventory.setVehicles(vehicles);
   }
 
   public List<Reservation> getReservations() {
@@ -47,5 +57,9 @@ public class Store {
 
   public void setReservations(List<Reservation> reservations) {
     this.reservations = reservations;
+  }
+
+  public boolean completeReservation() {
+    return true;
   }
 }

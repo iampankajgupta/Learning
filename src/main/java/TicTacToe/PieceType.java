@@ -1,5 +1,5 @@
 package TicTacToe;
 
 public enum PieceType {
-  X,O;
+  X,O,$;
 }
