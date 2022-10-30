@@ -14,8 +14,6 @@ public class Client {
         // Bill
         // Payment
         // Vehicle Inventory Manager
-
-
         List<User> userList = addUsers();
         List<Vehicle>vehicles = addVehicles();
         List<Store> stores = addStores(vehicles);
@@ -30,7 +28,6 @@ public class Client {
         Location userLocation = new Location("Malad","Mumbai","400097","Maharashtra");
         Store store = rentalSystem.getStore(userLocation);
 
-        VehicleInventory vehicleInventory = new BikeInventoryFactory();
         List<Vehicle> storeVehicles = store.getVehicles(VehicleType.BIKE);
 
 //        // reserving the particular vehicle
