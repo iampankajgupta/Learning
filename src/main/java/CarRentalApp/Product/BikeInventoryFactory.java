@@ -5,8 +5,6 @@ import java.util.stream.Collectors;
 
 public class BikeInventoryFactory extends VehicleInventory{
 
-    List<Vehicle> vehicles;
-
     public BikeInventoryFactory() {
         System.out.println("Bike Factory Return Bike");
     }
