@@ -5,12 +5,11 @@ import java.util.List;
 import java.util.stream.Collectors;
 
 public class CarInventoryFactory extends VehicleInventory{
-    List<Vehicle> vehicles = new ArrayList<>();
+    List<Vehicle> vehicles;
 
     public CarInventoryFactory() {
-        System.out.println("Car Factory Return Car");
-    }
 
+    }
 
     @Override
     public List<Vehicle> getVehicles() {

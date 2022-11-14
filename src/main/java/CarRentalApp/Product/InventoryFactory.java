@@ -1,5 +1,7 @@
 package CarRentalApp.Product;
 
+import java.util.List;
+
 public class InventoryFactory {
     public static VehicleInventory getVehicleFactory(VehicleType vehicleType){
         if(vehicleType.toString().equals("CAR")){
@@ -9,4 +11,5 @@ public class InventoryFactory {
         }
         return null;
     }
+
 }
