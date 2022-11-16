@@ -1,7 +1,7 @@
 package ParkingLot;
 
 public class TwoWheelerSpot extends ParkingSpot{
-  public TwoWheelerSpot(int price) {
+  public int TwoWheelerSpot(int price) {
     return 20;
   }
 }
