@@ -5,6 +5,8 @@ public class MinimiseSumAfterNRemovalElemment {
     public static void main(String[] args) {
         PriorityQueue<Integer>minHeap = new PriorityQueue<>();
         PriorityQueue<Integer>maxHeap = new PriorityQueue<>(Collections.reverseOrder());
+
+        // Bro Coders Channel
         int[]arr = {3,1,4,1,5,9};
         int n = arr.length;
         long[]suffix = new long[n];
