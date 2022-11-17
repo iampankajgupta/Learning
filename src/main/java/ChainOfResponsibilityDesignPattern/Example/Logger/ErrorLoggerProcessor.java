@@ -8,7 +8,7 @@ public class ErrorLoggerProcessor extends LoggerProcessor{
     }
 
     public void log(int logLevel, String message){
-        if(logLevel == ERROR){
+        if(logLevel == LoggerType.ERROR.value){
             System.out.println("ERROR Log Processor "+message);
         }else{
             super.log(logLevel,message);

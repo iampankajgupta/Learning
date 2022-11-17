@@ -1,5 +1,5 @@
 package BridgeDesignPattern;
 
 public interface Workshop {
-    public void make();
+  public void work();
 }

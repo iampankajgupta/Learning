@@ -7,7 +7,7 @@ public class DebugLoggerProcessor extends LoggerProcessor{
     }
 
     public void log(int logLevel,String message){
-        if(logLevel == DEBUG){
+        if(logLevel == LoggerType.DEBUG.value){
             System.out.println("Debug Logger "+message);
         }else super.log(logLevel,message);
     }

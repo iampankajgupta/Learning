@@ -9,7 +9,7 @@ public class InforLoggerProcessor extends LoggerProcessor{
     }
 
     public void log(int logLevel, String message){
-        if(logLevel == INFO){
+        if(logLevel == LoggerType.INFO.value){
             System.out.println("Info Log Processor");
         }else{
             super.log(logLevel,message);

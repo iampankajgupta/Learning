@@ -1,14 +1,13 @@
 package BridgeDesignPattern;
 
-public class Taxi extends Vehicle{
+public class Taxi extends Automobile{
+  protected Taxi(Workshop workshop, Workshop workshop2) {
+    super(workshop, workshop2);
+  }
 
-
-    public Taxi(Workshop workshop, WorkShop2 workShop2) {
-        super(workshop, workShop2);
-    }
-
-    @Override
-    public void manufacture() {
-
-    }
+  @Override
+  void manufacture() {
+    workshop.work();
+    workshop2.work();
+  }
 }
