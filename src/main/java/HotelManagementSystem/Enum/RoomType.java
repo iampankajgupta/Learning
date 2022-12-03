@@ -1,5 +1,5 @@
 package HotelManagementSystem.Enum;
 
 public enum RoomType {
-  STANDARAD,DELUX
+  STANDARAD,DELUX,FAMILY_SUITE
 }
