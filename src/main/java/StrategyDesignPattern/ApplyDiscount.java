@@ -4,6 +4,7 @@ public class ApplyDiscount {
 
     DiscountStrategy discountStrategy;
 
+    // constructor Injection
     public ApplyDiscount(DiscountStrategy discountStrategy) {
         this.discountStrategy = discountStrategy;
     }
