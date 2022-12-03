@@ -1,8 +1,11 @@
 package HotelManagementSystem;
 
+import java.util.ArrayList;
+import java.util.Date;
 import java.util.List;
 
-public class HouseKeeper {
-    List<Room> rooms;
-
+public class HouseKeeper extends Person {
+  public List<Room> getRoomsServiced(Date date){
+    return new ArrayList<>();
+  }
 }
