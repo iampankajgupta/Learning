@@ -1,0 +1,8 @@
+Facade Design Pattern
+
+No specific pros or cons of Facade Design Pattern
+
+1.A refactoring pattern
+2.Makes the code clean
+3.Simplest Structural Design Pattern
+4.Good to think about API design
