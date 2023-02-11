@@ -1,6 +1,6 @@
 package ParkingLot;
 
-public class TwoWheelerSpot extends ParkingSpot{
+public class TwoWheelerSpot extends Slot{
   public int TwoWheelerSpot(int price) {
     return 20;
   }
