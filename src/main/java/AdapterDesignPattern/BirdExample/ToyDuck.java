@@ -1,2 +1,5 @@
-package AdapterDesignPattern.BirdExample;public interface ToyDuck {
+package AdapterDesignPattern.BirdExample;
+
+public interface ToyDuck {
+  public void squeak();
 }

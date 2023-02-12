@@ -1,2 +1,8 @@
-package AdapterDesignPattern.BirdExample;public interface Bird {
+package AdapterDesignPattern.BirdExample;
+
+public interface Bird {
+
+  public void fly();
+  public void makeSound();
+
 }

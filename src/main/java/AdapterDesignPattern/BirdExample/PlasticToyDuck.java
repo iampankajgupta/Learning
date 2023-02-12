@@ -1,2 +1,8 @@
-package AdapterDesignPattern.BirdExample;public class PlasticToyDuck {
+package AdapterDesignPattern.BirdExample;
+
+public class PlasticToyDuck implements ToyDuck{
+  @Override
+  public void squeak() {
+    System.out.println("Squeak");
+  }
 }
