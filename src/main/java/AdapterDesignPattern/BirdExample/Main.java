@@ -5,6 +5,7 @@ public class Main {
     Bird bird = new Sparrow();
     bird.makeSound();
     bird.fly();
+    System.out.println("");
 
     ToyDuck toyDuck = new PlasticToyDuck();
     toyDuck.squeak();

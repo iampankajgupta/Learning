@@ -1,5 +1,6 @@
 package NullObjectPattern;
 
+
 public class VehicleFactory {
 
   public static Vehicle getVehicleInstance(String typeObject){

@@ -13,8 +13,8 @@ public class AnimalContainer implements IContainer{
 
   @Override
   public IIterator createIterator() {
-    AnimalIterator result = new AnimalIterator();
-    return result;
+    AnimalIterator animalIterator = new AnimalIterator();
+    return animalIterator;
   }
 
   private class AnimalIterator implements IIterator {
